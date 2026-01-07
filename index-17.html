@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Majo Pizarro Consultores | Asesoría Integral para Emprendedores</title>
+  <meta name="description" content="Asesoría profesional en finanzas, marketing, ventas y administración. Deja de improvisar: convierte tu idea en un negocio rentable con una metodología clara." />
+  <meta name="theme-color" content="#1e40af" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Majo Pizarro Consultores | Asesoría Integral para Emprendedores" />
+  <meta property="og:description" content="Metodología clara, decisiones con datos y acompañamiento práctico. Agenda tu primera consulta y dale rumbo a tu negocio." />
+  <meta property="og:type" content="website" />
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* Brand palette (Majo Pizarro) */
+      --brand-sage:#9BAA94;
+      --brand-terracotta:#D19C8C;
+      --brand-paper:#F8F7E8;
+      --brand-ink:#1C1C1C;
+
+      /* Neutrals */
+      --slate-950:#121212;
+      --slate-900:#1C1C1C;
+      --slate-800:#2a2a2a;
+      --slate-700:#3b3b3b;
+      --slate-600:#525252;
+      --slate-500:#6b7280;
+      --slate-200:#e7e5e4;
+      --slate-100:#f5f5f4;
+      --white:#ffffff;
+
+      --radius-xl: 24px;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+
+      --shadow-sm: 0 4px 20px rgba(0,0,0,0.06);
+      --shadow-md: 0 10px 40px rgba(0,0,0,0.10);
+      --shadow-lg: 0 25px 70px rgba(0,0,0,0.18);
+
+      /* Brand gradients */
+      --grad-brand: linear-gradient(135deg, var(--brand-sage) 0%, var(--brand-terracotta) 100%);
+      --grad-soft: linear-gradient(135deg, rgba(155,170,148,0.20) 0%, rgba(209,156,140,0.18) 100%);
+      --grad-accent: linear-gradient(90deg, var(--brand-terracotta), var(--brand-sage));
+      --ring: 0 0 0 4px rgba(155,170,148,0.22);
+
+      /* Page surfaces */
+      --page-bg: var(--brand-paper);
+      --card-bg: rgba(255,255,255,0.80);
+    }
+
+    *    *{ margin:0; padding:0; box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height:1.6;
+      color: var(--slate-800);
+      overflow-x:hidden;
+      background: var(--page-bg);
+    }
+    a{ color:inherit; }
+    .container{ max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* Skip link (accesibilidad) */
+    .skip-link{
+      position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+      background:#fff; color:#000; padding:0.75rem 1rem; border-radius: 10px;
+      z-index:2000;
+    }
+    .skip-link:focus{ left: 1rem; top: 1rem; width:auto; height:auto; box-shadow: var(--shadow-md); }
+
+    /* Header */
+    header{
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      padding: 0.9rem 0;
+      position: fixed;
+      top:0; width:100%;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(226,232,240,0.7);
+      transition: padding 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+    header.scrolled{
+      padding: 0.55rem 0;
+      box-shadow: 0 8px 30px rgba(15,23,42,0.10);
+      background: rgba(255,255,255,0.96);
+    }
+
+    nav{
+      max-width: 1200px;
+      margin: 0 auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding: 0 1.5rem;
+      gap: 1rem;
+    }
+
+    .logo{
+      display:flex; align-items:center; gap:0.6rem;
+      font-weight: 800; font-size: 1.25rem;
+      letter-spacing: -0.02em;
+      user-select:none;
+    }
+    .logo-badge{
+      width: 38px; height: 38px;
+      display:grid; place-items:center;
+      border-radius: 12px;
+      background: var(--grad-brand);
+      color: white;
+      box-shadow: 0 10px 25px rgba(37,99,235,0.25);
+      flex: 0 0 auto;
+    }
+
+    .logo-badge.logo-img{
+      background: rgba(255,255,255,0.65);
+      border: 1px solid rgba(28,28,28,0.08);
+      box-shadow: 0 10px 25px rgba(28,28,28,0.10);
+      overflow:hidden;
+    }
+    .logo-badge.logo-img img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display:block;
+      padding: 6px;
+      background: transparent;
+    }
+
+    .logo-text{
+      background: var(--grad-brand);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+
+    .nav-links{
+      list-style:none;
+      display:flex;
+      gap: 2rem;
+      align-items:center;
+    }
+
+    .nav-links a{
+      color: var(--slate-600);
+      text-decoration:none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      position:relative;
+      transition: color 0.2s ease;
+      padding: 0.25rem 0;
+    }
+    .nav-links a:hover{ color: var(--blue-500); }
+    .nav-links a:focus-visible{ outline:none; box-shadow: var(--ring); border-radius: 10px; padding: 0.25rem 0.5rem; }
+
+    .nav-links a::after{
+      content:'';
+      position:absolute;
+      left:0; bottom:-6px;
+      width:0; height:2px;
+      background: var(--blue-500);
+      transition: width 0.25s ease;
+    }
+    .nav-links a:hover::after{ width:100%; }
+
+    .nav-cta{
+      background: var(--grad-brand);
+      color: var(--brand-ink) !important;
+      padding: 0.7rem 1.1rem;
+      border-radius: 12px;
+      font-weight: 700;
+      box-shadow: 0 12px 30px rgba(37,99,235,0.22);
+    }
+    .nav-cta::after{ display:none; }
+    .nav-cta:hover{ transform: translateY(-1px); }
+
+    /* Mobile nav */
+    .nav-right{ display:flex; align-items:center; gap: 0.75rem; }
+    .hamburger{
+      display:none;
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      border: 1px solid rgba(226,232,240,0.9);
+      background: rgba(241,245,249,0.75);
+      cursor:pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .hamburger:hover{ transform: translateY(-1px); background: rgba(241,245,249,1); }
+    .hamburger:focus-visible{ outline:none; box-shadow: var(--ring); }
+    .hamburger span{
+      display:block;
+      width: 18px; height:2px;
+      background: var(--slate-700);
+      margin: 0 auto;
+      position:relative;
+    }
+    .hamburger span::before, .hamburger span::after{
+      content:'';
+      position:absolute;
+      left:0;
+      width: 18px; height:2px;
+      background: var(--slate-700);
+      transition: transform 0.2s ease;
+    }
+    .hamburger span::before{ top: -6px; }
+    .hamburger span::after{ top: 6px; }
+
+    .mobile-drawer{
+      display:none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15,23,42,0.45);
+      z-index: 1200;
+      padding: 1.25rem;
+    }
+    .mobile-panel{
+      width: min(420px, 100%);
+      margin-left:auto;
+      background: rgba(255,255,255,0.98);
+      border-radius: 18px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(226,232,240,0.9);
+      padding: 1.1rem;
+      transform: translateX(8px);
+      animation: slideIn 180ms ease-out forwards;
+    }
+    @keyframes slideIn{ from{ opacity:0; transform: translateX(20px);} to{ opacity:1; transform: translateX(0);} }
+    .mobile-top{
+      display:flex; align-items:center; justify-content:space-between; gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .mobile-close{
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      border: 1px solid rgba(226,232,240,0.9);
+      background: rgba(241,245,249,0.75);
+      cursor:pointer;
+    }
+    .mobile-close:focus-visible{ outline:none; box-shadow: var(--ring); }
+    .mobile-links{ list-style:none; display:flex; flex-direction:column; gap: 0.25rem; padding: 0.5rem 0; }
+    .mobile-links a{
+      display:flex; justify-content:space-between; align-items:center;
+      padding: 0.9rem 0.9rem;
+      border-radius: 14px;
+      text-decoration:none;
+      color: var(--slate-800);
+      font-weight: 700;
+      background: rgba(248,250,252,0.9);
+      border: 1px solid rgba(226,232,240,0.9);
+    }
+    .mobile-links a:hover{ border-color: rgba(59,130,246,0.35); }
+    .mobile-links a small{ color: var(--slate-500); font-weight: 600; }
+
+    /* Hero */
+    .hero{
+      background: radial-gradient(circle at 20% 10%, rgba(209,156,140,0.22), transparent 45%),
+                  radial-gradient(circle at 80% 15%, rgba(155,170,148,0.26), transparent 48%),
+                  linear-gradient(180deg, rgba(248,247,232,1) 0%, rgba(248,247,232,1) 55%, rgba(255,255,255,0.92) 100%);
+      color: var(--brand-ink);
+      padding: 10rem 0 6rem;
+      margin-top: 70px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero::before{
+      content:'';
+      position:absolute; inset:0;
+      background:
+        radial-gradient(circle at 25% 20%, rgba(209,156,140,0.20), transparent 52%),
+        radial-gradient(circle at 75% 25%, rgba(155,170,148,0.22), transparent 55%),
+        radial-gradient(circle at 50% 90%, rgba(28,28,28,0.06), transparent 58%);
+      opacity: 1;
+      pointer-events:none;
+    }
+    .hero-inner{
+      position:relative;
+      z-index:1;
+      display:grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3rem;
+      align-items:center;
+    }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap: 0.5rem;
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(28,28,28,0.10);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+      width: fit-content;
+    }
+    .kicker b{
+      background: linear-gradient(135deg, var(--brand-terracotta) 0%, var(--brand-sage) 100%);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    .hero h1{
+      font-size: clamp(2.1rem, 3.5vw, 3.6rem);
+      line-height:1.1;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+    }
+    .hero .highlight{
+      background: linear-gradient(135deg, var(--brand-terracotta) 0%, var(--brand-sage) 100%);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    .hero p{
+      font-size: 1.1rem;
+      opacity: 0.92;
+      line-height: 1.8;
+      max-width: 46rem;
+      margin-bottom: 1.9rem;
+    }
+    .hero-buttons{ display:flex; gap: 1rem; flex-wrap:wrap; }
+    .btn{
+      padding: 0.95rem 1.25rem;
+      border-radius: 14px;
+      font-size: 1rem;
+      font-weight: 800;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap: 0.6rem;
+      border:none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      letter-spacing: -0.01em;
+    }
+    .btn:focus-visible{ outline:none; box-shadow: var(--ring); }
+    .btn-primary{
+      background: var(--brand-ink);
+      color: var(--brand-paper);
+      box-shadow: 0 18px 45px rgba(255,255,255,0.18);
+    }
+    .btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 24px 60px rgba(255,255,255,0.22); }
+    .btn-secondary{
+      background: rgba(248,247,232,0.72);
+      color: var(--brand-ink);
+      border: 2px solid rgba(28,28,28,0.18);
+      backdrop-filter: blur(12px);
+    }
+    .btn-secondary:hover{ transform: translateY(-2px); background: rgba(255,255,255,0.16); border-color: rgba(255,255,255,0.45); }
+    .btn .arrow{ display:inline-block; transition: transform 0.2s ease; }
+    .btn:hover .arrow{ transform: translateX(3px); }
+
+    .trust-row{
+      display:flex;
+      gap: 1rem;
+      flex-wrap:wrap;
+      margin-top: 1.6rem;
+      opacity: 0.92;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 0.5rem;
+      padding: 0.55rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(28,28,28,0.10);
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+    .pill span{ opacity: 0.95; }
+
+    .hero-card{
+      background: rgba(255,255,255,0.78);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(28,28,28,0.10);
+      border-radius: 22px;
+      padding: 1.6rem;
+      box-shadow: 0 26px 70px rgba(0,0,0,0.28);
+      position: relative;
+      overflow:hidden;
+    }
+    .hero-card::before{
+      content:'';
+      position:absolute;
+      inset:-2px;
+      background: radial-gradient(circle at 30% 20%, rgba(167,139,250,0.22), transparent 55%),
+                  radial-gradient(circle at 80% 60%, rgba(96,165,250,0.18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-card > *{ position:relative; z-index:1; }
+    .hero-card h3{ margin-bottom: 0.75rem; font-size: 1.1rem; letter-spacing: -0.01em; }
+    .mini{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 0.9rem;
+      margin-top: 1.1rem;
+    }
+    .mini .mini-item{
+      background: rgba(248,247,232,0.70);
+      border: 1px solid rgba(28,28,28,0.10);
+      border-radius: 16px;
+      padding: 0.9rem 0.95rem;
+    }
+    .mini .mini-item b{ display:block; font-weight: 800; margin-bottom: 0.2rem; }
+    .mini .mini-item small{ opacity: 0.85; }
+
+    .hero-stats{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+      margin-top: 2.2rem;
+    }
+    .stat-item{ text-align:left; padding: 0.85rem 0.95rem; border-radius: 16px; background: rgba(255,255,255,0.65);
+      border: 1px solid rgba(28,28,28,0.10); }
+    .stat-number{
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, var(--brand-terracotta) 0%, var(--brand-sage) 100%);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    .stat-label{ font-size: 0.88rem; opacity: 0.86; margin-top: 0.2rem; }
+
+    /* Sections */
+    .section{
+      padding: 5.5rem 0;
+    }
+    .section.light{ background: #f8fafc; }
+    .section.white{ background: #ffffff; }
+    .section.dark{
+      background: linear-gradient(135deg, rgba(28,28,28,1) 0%, rgba(28,28,28,0.96) 60%, rgba(28,28,28,1) 100%);
+      color: #fff;
+    }
+
+    .section-header{ text-align:center; margin-bottom: 3.2rem; }
+    .section-tag{
+      display:inline-flex;
+      align-items:center;
+      gap: 0.5rem;
+      background: var(--grad-soft);
+      color: #1e40af;
+      padding: 0.5rem 1.1rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(99,102,241,0.15);
+    }
+    .section-title{
+      font-size: clamp(1.8rem, 2.6vw, 2.6rem);
+      color: var(--slate-900);
+      margin-bottom: 0.9rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+    }
+    .section.dark .section-title{ color: white; }
+    .section-subtitle{
+      font-size: 1.1rem;
+      color: var(--slate-500);
+      max-width: 52rem;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+    .section.dark .section-subtitle{ color: rgba(255,255,255,0.82); }
+
+    /* Cards grids */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card{
+      background: white;
+      padding: 2rem;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+      position:relative;
+      overflow:hidden;
+    }
+    .card:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(59,130,246,0.14);
+      border-color: rgba(59,130,246,0.25);
+    }
+    .card::before{
+      content:'';
+      position:absolute; left:0; top:0; right:0; height:4px;
+      background: var(--grad-accent);
+      transform: scaleX(0);
+      transform-origin:left;
+      transition: transform 0.25s ease;
+    }
+    .card:hover::before{ transform: scaleX(1); }
+
+    .icon{
+      width: 62px; height: 62px;
+      border-radius: 16px;
+      background: var(--grad-soft);
+      display:grid; place-items:center;
+      font-size: 1.9rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .card h3{
+      font-size: 1.25rem;
+      color: var(--slate-900);
+      margin-bottom: 0.6rem;
+      font-weight: 900;
+      letter-spacing:-0.02em;
+    }
+    .card p{ color: var(--slate-500); margin-bottom: 1rem; line-height: 1.75; }
+
+    .features{
+      list-style:none;
+      margin-top: 1.1rem;
+    }
+    .features li{
+      padding: 0.55rem 0;
+      color: var(--slate-700);
+      display:flex;
+      align-items:flex-start;
+      gap: 0.65rem;
+      font-size: 0.95rem;
+    }
+    .features li::before{
+      content:'✓';
+      background: var(--grad-accent);
+      color:white;
+      width: 22px; height: 22px;
+      border-radius: 999px;
+      display:grid; place-items:center;
+      font-weight: 900;
+      font-size: 0.78rem;
+      flex: 0 0 auto;
+      margin-top: 2px;
+    }
+
+    /* Results strip */
+    .results-strip{
+      margin-top: 2.2rem;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+    .result{
+      background: #ffffff;
+      border-radius: 18px;
+      border: 1px solid var(--slate-200);
+      padding: 1.25rem 1.25rem;
+      box-shadow: var(--shadow-sm);
+      display:flex;
+      gap: 0.9rem;
+      align-items:flex-start;
+    }
+    .result b{ display:block; font-weight: 900; letter-spacing:-0.02em; }
+    .result small{ color: var(--slate-500); line-height: 1.6; }
+    .dot{
+      width: 44px; height: 44px;
+      border-radius: 14px;
+      background: var(--grad-soft);
+      display:grid; place-items:center;
+      font-size: 1.25rem;
+      flex: 0 0 auto;
+    }
+
+    /* Process */
+    .process-grid{ margin-top: 2.2rem; }
+    .process-card{
+      position:relative;
+      padding: 1.8rem 1.6rem 1.6rem;
+      background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+      border-radius: var(--radius-xl);
+      border: 2px solid #e2e8f0;
+    }
+    .process-number{
+      position:absolute;
+      top: -18px;
+      left: 1.5rem;
+      width: 46px; height: 46px;
+      background: var(--grad-accent);
+      color:white;
+      border-radius: 14px;
+      display:grid; place-items:center;
+      font-size: 1.25rem;
+      font-weight: 900;
+      box-shadow: 0 8px 22px rgba(59,130,246,0.30);
+    }
+    .process-card h3{ margin-top: 0.8rem; margin-bottom: 0.6rem; color: var(--slate-900); font-size: 1.15rem; font-weight: 900; }
+    .process-card p{ color: var(--slate-700); }
+
+    /* Testimonials */
+    .testimonial-card{
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(28,28,28,0.10);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      backdrop-filter: blur(18px);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.18);
+    }
+    .testimonial-text{ font-size: 1.05rem; line-height:1.8; opacity: 0.92; margin-bottom: 1.2rem; }
+    .author{ display:flex; align-items:center; gap: 0.9rem; }
+    .avatar{
+      width: 46px; height: 46px;
+      border-radius: 999px;
+      background: var(--grad-accent);
+      display:grid; place-items:center;
+      font-weight: 900;
+    }
+    .author h4{ font-weight: 900; margin-bottom: 0.1rem; }
+    .author p{ font-size: 0.9rem; opacity: 0.75; }
+
+    /* CTA box */
+    .cta-box{
+      max-width: 980px;
+      margin: 0 auto;
+      background: var(--grad-brand);
+      padding: 3.3rem 2rem;
+      border-radius: 30px;
+      text-align:center;
+      color:white;
+      position:relative;
+      overflow:hidden;
+      box-shadow: 0 22px 70px rgba(37,99,235,0.22);
+    }
+    .cta-box::before{
+      content:'';
+      position:absolute;
+      inset:-40%;
+      background: radial-gradient(circle, rgba(255,255,255,0.14) 0%, transparent 55%);
+      animation: pulse 3.2s ease-in-out infinite;
+      pointer-events:none;
+    }
+    @keyframes pulse{ 0%,100%{ transform: scale(1);} 50%{ transform: scale(1.08);} }
+    .cta-box > *{ position:relative; z-index:1; }
+    .cta-box h2{
+      font-size: clamp(1.6rem, 2.3vw, 2.3rem);
+      margin-bottom: 0.75rem;
+      letter-spacing:-0.03em;
+      font-weight: 900;
+    }
+    .cta-box p{ font-size: 1.1rem; opacity: 0.92; margin-bottom: 1.5rem; }
+
+    /* About */
+    .about-wrap{
+      display:grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.5rem;
+      align-items:stretch;
+    }
+    .about-card{
+      background:white;
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .about-card h3{ font-weight: 900; letter-spacing:-0.02em; margin-bottom: 0.6rem; }
+    .about-card p{ color: var(--slate-600); margin-bottom: 1rem; }
+    .about-list{ list-style:none; display:grid; gap: 0.55rem; margin-top: 0.9rem; }
+    .about-list li{ display:flex; gap: 0.6rem; color: var(--slate-700); }
+    .about-list li::before{ content:"✓"; color: var(--blue-600); font-weight: 900; }
+
+    /* FAQ */
+    .faq{
+      max-width: 980px;
+      margin: 0 auto;
+      display:grid;
+      gap: 0.9rem;
+    }
+    details{
+      background: white;
+      border: 1px solid var(--slate-200);
+      border-radius: 18px;
+      padding: 1rem 1.1rem;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+    details[open]{ border-color: rgba(59,130,246,0.30); }
+    summary{
+      list-style:none;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 1rem;
+      font-weight: 900;
+      letter-spacing:-0.01em;
+      color: var(--slate-900);
+    }
+    summary::-webkit-details-marker{ display:none; }
+    .chev{
+      width: 36px; height: 36px;
+      border-radius: 12px;
+      display:grid; place-items:center;
+      background: rgba(241,245,249,0.9);
+      border: 1px solid rgba(226,232,240,0.9);
+      flex: 0 0 auto;
+      transition: transform 0.2s ease;
+    }
+    details[open] .chev{ transform: rotate(180deg); }
+    details p{ margin-top: 0.8rem; color: var(--slate-600); line-height: 1.8; }
+
+    /* Contact */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 1.5rem;
+      align-items:start;
+    }
+    .contact-form{
+      background:white;
+      border-radius: var(--radius-xl);
+      padding: 2.2rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(226,232,240,0.9);
+    }
+    .contact-form h3{ color: var(--slate-900); margin-bottom: 1.2rem; font-size: 1.35rem; font-weight: 900; }
+    .form-row{ display:grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group{ margin-bottom: 1rem; }
+    label{ display:block; margin-bottom: 0.5rem; color: var(--slate-900); font-weight: 800; font-size: 0.92rem; }
+    input, textarea{
+      width:100%;
+      padding: 0.95rem 1rem;
+      border: 2px solid var(--slate-200);
+      border-radius: 14px;
+      font-size: 1rem;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      font-family: inherit;
+      background: #f8fafc;
+      color: var(--slate-900);
+    }
+    input:focus, textarea:focus{
+      outline:none;
+      border-color: var(--brand-sage);
+      background:white;
+      box-shadow: var(--ring);
+    }
+    textarea{ resize: vertical; min-height: 140px; }
+    .hint{ color: var(--slate-500); font-size: 0.9rem; margin-top: 0.2rem; }
+
+    .submit-btn{
+      width:100%;
+      padding: 1.05rem 1.1rem;
+      background: var(--grad-brand);
+      color:white;
+      border:none;
+      border-radius: 14px;
+      font-size: 1.05rem;
+      font-weight: 900;
+      cursor:pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 0.6rem;
+    }
+    .submit-btn:hover{ transform: translateY(-2px); box-shadow: 0 18px 55px rgba(59,130,246,0.30); }
+    .submit-btn:focus-visible{ outline:none; box-shadow: var(--ring); }
+
+    .info-stack{ display:flex; flex-direction:column; gap: 1rem; }
+    .info-card{
+      background:white;
+      border-radius: var(--radius-xl);
+      padding: 1.6rem;
+      border: 1px solid rgba(226,232,240,0.9);
+      box-shadow: var(--shadow-sm);
+    }
+    .info-card h3{ color: var(--slate-900); margin-bottom: 1rem; font-size: 1.15rem; font-weight: 900; }
+    .info-item{
+      display:flex;
+      align-items:flex-start;
+      gap: 0.8rem;
+      padding: 0.85rem;
+      background: #f8fafc;
+      border-radius: 14px;
+      margin-bottom: 0.75rem;
+      border: 1px solid rgba(226,232,240,0.9);
+    }
+    .info-icon{ font-size: 1.35rem; flex: 0 0 auto; }
+    .info-item strong{ display:block; margin-bottom: 0.2rem; color: var(--slate-900); }
+
+    .social-links{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+    .social-btn{
+      padding: 0.9rem;
+      border-radius: 14px;
+      text-decoration:none;
+      color:white;
+      font-weight: 900;
+      text-align:center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap: 0.45rem;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .social-btn:hover{ transform: translateY(-2px); box-shadow: 0 16px 40px rgba(0,0,0,0.18); filter: saturate(1.08); }
+    .facebook{ background:#1877f2; }
+    .instagram{ background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+    .linkedin{ background:#0077b5; }
+    .whatsapp{ background: var(--brand-sage); color: var(--brand-ink); border-color: rgba(11,18,32,0.08); }
+
+    /* Footer */
+    footer{
+      background: var(--brand-ink);
+      color:white;
+      padding: 3rem 0 2rem;
+      text-align:center;
+    }
+    .footer-logo{
+      font-size: 1.6rem;
+      font-weight: 900;
+      margin-bottom: 0.6rem;
+      background: linear-gradient(135deg, var(--brand-terracotta) 0%, var(--brand-sage) 100%);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    .footer-text{
+      opacity: 0.75;
+      margin-top: 1.2rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(255,255,255,0.10);
+      font-size: 0.95rem;
+    }
+
+    /* Floating WhatsApp + Sticky mobile CTA */
+    .wa-float{
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 1500;
+      display:flex;
+      align-items:center;
+      gap: 0.6rem;
+      padding: 0.85rem 1rem;
+      border-radius: 999px;
+      background: rgba(155,170,148,0.96);
+      color: #0b1220;
+      font-weight: 900;
+      text-decoration:none;
+      box-shadow: 0 18px 55px rgba(0,0,0,0.22);
+      border: 1px solid rgba(11,18,32,0.10);
+    }
+    .wa-float:hover{ transform: translateY(-2px); }
+    .wa-float:focus-visible{ outline:none; box-shadow: var(--ring); }
+    .wa-ico{ font-size: 1.2rem; }
+
+    .mobile-cta{
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      z-index: 1400;
+      display:none;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(226,232,240,0.9);
+      border-radius: 18px;
+      padding: 0.6rem;
+      box-shadow: 0 18px 60px rgba(15,23,42,0.18);
+    }
+    .mobile-cta .btn{ width:100%; justify-content:center; }
+
+    /* Animations helpers */
+    [data-reveal]{
+      opacity:0;
+      transform: translateY(18px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+      will-change: opacity, transform;
+    }
+    [data-reveal].reveal{
+      opacity:1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-inner{ grid-template-columns: 1fr; text-align:left; }
+      .hero-card{ max-width: 620px; }
+      .hero-stats{ grid-template-columns: repeat(3, 1fr); }
+      .contact-grid{ grid-template-columns: 1fr; }
+      .about-wrap{ grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 780px){
+      .nav-links{ display:none; }
+      .hamburger{ display:inline-grid; place-items:center; }
+      .hero{ padding: 8.5rem 0 5rem; }
+      .hero-buttons{ justify-content:flex-start; }
+      .hero-stats{ grid-template-columns: 1fr; }
+      .form-row{ grid-template-columns: 1fr; }
+      .social-links{ grid-template-columns: 1fr; }
+      .mobile-cta{ display:block; }
+      .wa-float{ bottom: 86px; } /* deja espacio para el CTA fijo */
+    }
+
+    /* Reduce motion */
+    @media (prefers-reduced-motion: reduce){
+      html{ scroll-behavior: auto; }
+      *{ transition: none !important; animation: none !important; }
+      [data-reveal]{ opacity:1; transform:none; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
+
+  <header id="header" aria-label="Encabezado">
+    <nav aria-label="Navegación principal">
+      <div class="logo" aria-label="Majo Pizarro Consultores">
+        <div class="logo-badge logo-img" aria-hidden="true"><img src="logo-majo-pizarro-consultores.png" alt="" /></div>
+        <div class="logo-text">Majo Pizarro Consultores</div>
+      </div>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a href="#contacto" class="nav-cta">Contactar</a>
+        <button class="hamburger" id="openMenu" aria-label="Abrir menú" aria-controls="mobileDrawer" aria-expanded="false">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-panel" role="dialog" aria-modal="true" aria-label="Menú">
+      <div class="mobile-top">
+        <div class="logo">
+          <div class="logo-badge logo-img" aria-hidden="true"><img src="logo-majo-pizarro-consultores.png" alt="" /></div>
+          <div class="logo-text">Majo Pizarro Consultores</div>
+        </div>
+        <button class="mobile-close" id="closeMenu" aria-label="Cerrar menú">✕</button>
+      </div>
+
+      <ul class="mobile-links" role="list">
+        <li><a href="#inicio"><span>Inicio</span><small>Tu punto de partida</small></a></li>
+        <li><a href="#servicios"><span>Servicios</span><small>Finanzas, marketing y más</small></a></li>
+        <li><a href="#proceso"><span>Proceso</span><small>Metodología probada</small></a></li>
+        <li><a href="#testimonios"><span>Testimonios</span><small>Resultados reales</small></a></li>
+        <li><a href="#faq"><span>FAQ</span><small>Preguntas frecuentes</small></a></li>
+        <li><a href="#contacto"><span>Contactar</span><small>Agenda tu consulta</small></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="inicio">
+    <section class="hero" aria-label="Sección principal">
+      <div class="container hero-inner">
+        <div>
+          <div class="kicker" data-reveal>✨ <span>Deja de improvisar, empieza a crecer</span> <b>con estrategia</b></div>
+          <h1 data-reveal>Transforma tu idea en un <span class="highlight">negocio rentable</span> (con un plan claro)</h1>
+          <p data-reveal>
+            Si tu negocio no avanza como debería, casi nunca es “falta de ganas”.
+            Normalmente falta <b>estructura, números claros</b> y una estrategia que puedas ejecutar sin quemarte.
+            Te acompañamos para ordenar tu operación y convertir esfuerzo en resultados.
+          </p>
+
+          <div class="hero-buttons" data-reveal>
+            <a href="#contacto" class="btn btn-primary">
+              Quiero claridad para mi negocio <span class="arrow">→</span>
+            </a>
+            <a href="#servicios" class="btn btn-secondary">
+              Ver servicios <span class="arrow">→</span>
+            </a>
+          </div>
+
+          <div class="trust-row" data-reveal>
+            <div class="pill">✅ <span>Metodología práctica</span></div>
+            <div class="pill">📊 <span>Decisiones con datos</span></div>
+            <div class="pill">🧩 <span>Plan accionable</span></div>
+          </div>
+
+          <div class="hero-stats" data-reveal aria-label="Estadísticas">
+            <div class="stat-item">
+              <div class="stat-number" data-count="150" data-suffix="+">0</div>
+              <div class="stat-label">Emprendedores asesorados</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-count="95" data-suffix="%">0</div>
+              <div class="stat-label">Satisfacción del proceso</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-count="5" data-suffix="+">0</div>
+              <div class="stat-label">Años de experiencia</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card" data-reveal aria-label="Tarjeta destacada">
+          <h3>📅 Próxima sesión disponible</h3>
+          <p style="opacity:0.92; line-height:1.75;">
+            Agenda tu consulta inicial de 30 minutos y salís con un diagnóstico claro:
+            qué ajustar, por dónde empezar y cuál es tu siguiente paso.
+          </p>
+
+          <div class="mini">
+            <div class="mini-item">
+              <b>🧭 Diagnóstico</b>
+              <small>Detectamos cuellos de botella (ventas, costos, procesos).</small>
+            </div>
+            <div class="mini-item">
+              <b>🧾 Plan de acción</b>
+              <small>Acciones concretas para 7, 30 y 90 días.</small>
+            </div>
+            <div class="mini-item">
+              <b>💬 Acompañamiento</b>
+              <small>Te guío para que lo ejecutes sin enredos.</small>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="servicios" class="section light" aria-label="Servicios">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Servicios Integrales</span>
+          <h2 class="section-title">Soluciones para cada área de tu negocio</h2>
+          <p class="section-subtitle">
+            Asesoría profesional adaptada a tu etapa. Menos teoría, más implementación.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card" data-reveal>
+            <div class="icon">💰</div>
+            <h3>Asesoría financiera</h3>
+            <p>Para que tu negocio deje de improvisar y empiece a ganar con números claros.</p>
+            <ul class="features">
+              <li>Análisis y reducción de costos operativos</li>
+              <li>Reestructuración estratégica de deudas</li>
+              <li>Planificación financiera personalizada</li>
+              <li>Proyecciones y flujo de caja</li>
+              <li>Rentabilidad por producto/servicio</li>
+            </ul>
+          </article>
+
+          <article class="card" data-reveal>
+            <div class="icon">📈</div>
+            <h3>Marketing y ventas</h3>
+            <p>Estrategias para atraer, convertir y fidelizar a tus clientes ideales.</p>
+            <ul class="features">
+              <li>Estrategia digital multicanal</li>
+              <li>Optimización de embudo de ventas</li>
+              <li>Técnicas de cierre y negociación</li>
+              <li>Posicionamiento de marca</li>
+              <li>Retención y recompra</li>
+            </ul>
+          </article>
+
+          <article class="card" data-reveal>
+            <div class="icon">⚙️</div>
+            <h3>Gestión administrativa</h3>
+            <p>Orden y procesos para escalar sin perder control ni paz mental.</p>
+            <ul class="features">
+              <li>Estructura organizacional</li>
+              <li>Optimización de procesos</li>
+              <li>KPIs y tableros de control</li>
+              <li>Gestión de equipos</li>
+              <li>Automatización de tareas</li>
+            </ul>
+          </article>
+
+          <article class="card" data-reveal>
+            <div class="icon">🚀</div>
+            <h3>Formalización de ideas</h3>
+            <p>Convierte tu concepto en un plan viable, con pasos claros desde el día uno.</p>
+            <ul class="features">
+              <li>Validación de modelo de negocio</li>
+              <li>Business Model Canvas</li>
+              <li>Plan de negocio profesional</li>
+              <li>Análisis de mercado y competencia</li>
+              <li>Estrategia de lanzamiento</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="results-strip" aria-label="Resultados" data-reveal>
+          <div class="result">
+            <div class="dot">📉</div>
+            <div>
+              <b>Menos fuga de dinero</b>
+              <small>Identificamos costos ocultos y mejoramos el margen con ajustes realistas.</small>
+            </div>
+          </div>
+          <div class="result">
+            <div class="dot">🧠</div>
+            <div>
+              <b>Claridad y enfoque</b>
+              <small>Priorización: qué hacer primero y qué no vale la pena hacer (todavía).</small>
+            </div>
+          </div>
+          <div class="result">
+            <div class="dot">📌</div>
+            <div>
+              <b>Plan ejecutable</b>
+              <small>Acciones concretas con fechas, responsables y métricas, sin humo.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="proceso" class="section white" aria-label="Proceso">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Metodología Probada</span>
+          <h2 class="section-title">¿Cómo trabajo contigo?</h2>
+          <p class="section-subtitle">
+            Un proceso estructurado que se adapta a cualquier etapa de tu emprendimiento.
+          </p>
+        </div>
+
+        <div class="grid process-grid">
+          <div class="process-card" data-reveal>
+            <div class="process-number">1</div>
+            <h3>Diagnóstico (claridad total)</h3>
+            <p>Revisamos tu situación: ventas, costos, procesos y oportunidades. Detectamos el cuello de botella real.</p>
+          </div>
+
+          <div class="process-card" data-reveal>
+            <div class="process-number">2</div>
+            <h3>Plan de acción (7/30/90 días)</h3>
+            <p>Definimos pasos claros y medibles. Nada de listas eternas: lo que mueve la aguja.</p>
+          </div>
+
+          <div class="process-card" data-reveal>
+            <div class="process-number">3</div>
+            <h3>Implementación (acompañada)</h3>
+            <p>Ejecutamos contigo. Ajustamos con datos y te dejo un sistema que puedas sostener.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section light" aria-label="Sobre mí">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Acompañamiento real</span>
+          <h2 class="section-title">No solo te digo qué hacer: lo ordenamos y lo ejecutamos</h2>
+          <p class="section-subtitle">
+            La diferencia está en la implementación. Mi enfoque es práctico, con indicadores simples y decisiones claras.
+          </p>
+        </div>
+
+        <div class="about-wrap">
+          <div class="about-card" data-reveal>
+            <h3>Lo que vas a sentir después de trabajar conmigo</h3>
+            <p>
+              Más control, más claridad y un plan que se puede cumplir. Tu negocio empieza a funcionar como un sistema,
+              no como una colección de urgencias.
+            </p>
+            <ul class="about-list">
+              <li>Qué vender, a quién y con qué mensaje</li>
+              <li>Cuánto realmente ganás (y por qué)</li>
+              <li>Qué procesos ordenar primero para escalar</li>
+              <li>Indicadores simples para no “volar a ciegas”</li>
+            </ul>
+          </div>
+
+          <div class="about-card" data-reveal>
+            <h3>Mini-auditoría rápida (gratis)</h3>
+            <p>En la primera consulta identificamos tu principal palanca de crecimiento y te llevás un “siguiente paso” claro.</p>
+            <a class="btn btn-primary" href="#contacto" style="justify-content:center; width:100%;">
+              Agenda tu consulta gratuita <span class="arrow">→</span>
+            </a>
+            <p class="hint" style="margin-top:0.8rem;">
+              ⏱️ 30 minutos | 💬 Virtual | 📌 Respuesta en menos de 24 horas
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonios" class="section dark" aria-label="Testimonios">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" style="background: rgba(255,255,255,0.16); color: white; border-color: rgba(255,255,255,0.12);">Lo que dicen mis clientes</span>
+          <h2 class="section-title">Historias de éxito reales</h2>
+          <p class="section-subtitle">Emprendedores que transformaron sus negocios con asesoría profesional</p>
+        </div>
+
+        <div class="grid">
+          <div class="testimonial-card" data-reveal>
+            <p class="testimonial-text">“Redujimos costos en un 30% y por fin entendimos dónde se iba el dinero. Recomendaciones claras y accionables.”</p>
+            <div class="author">
+              <div class="avatar">MR</div>
+              <div>
+                <h4>María Rodríguez</h4>
+                <p>Fundadora de EcoTienda</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" data-reveal>
+            <p class="testimonial-text">“Pasamos de una idea confusa a un plan sólido en 6 semanas. Ahora tenemos claridad del camino y del mercado.”</p>
+            <div class="author">
+              <div class="avatar">CL</div>
+              <div>
+                <h4>Carlos López</h4>
+                <p>CEO de TechStart</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" data-reveal>
+            <p class="testimonial-text">“La estrategia de marketing triplicó nuestras ventas en 4 meses. El acompañamiento fue clave para sostener el ritmo.”</p>
+            <div class="author">
+              <div class="avatar">AS</div>
+              <div>
+                <h4>Ana Sánchez</h4>
+                <p>Directora de Boutique Luna</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section white" aria-label="Llamado a la acción">
+      <div class="container">
+        <div class="cta-box" data-reveal>
+          <h2>¿Listo para llevar tu negocio al siguiente nivel?</h2>
+          <p>Agenda tu primera consulta gratuita y descubrí qué ajustar para crecer con orden.</p>
+          <a href="#contacto" class="btn btn-primary" style="background:white; color:#1e40af;">
+            Agenda tu consulta gratuita <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section light" aria-label="Preguntas frecuentes">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">FAQ</span>
+          <h2 class="section-title">Preguntas frecuentes</h2>
+          <p class="section-subtitle">Respuestas rápidas para que tomes una decisión con confianza.</p>
+        </div>
+
+        <div class="faq">
+          <details data-reveal>
+            <summary>¿La consulta inicial realmente es gratis? <span class="chev">⌄</span></summary>
+            <p>Sí. Es una llamada de 30 minutos para entender tu situación y darte una recomendación clara del siguiente paso. Si seguimos, te propongo un plan de trabajo según tu etapa.</p>
+          </details>
+
+          <details data-reveal>
+            <summary>¿Trabajás con negocios pequeños o solo empresas grandes? <span class="chev">⌄</span></summary>
+            <p>Trabajo con emprendedores desde cero, negocios en crecimiento y empresas establecidas. La diferencia es el enfoque, no el tamaño.</p>
+          </details>
+
+          <details data-reveal>
+            <summary>¿Cómo se mide el progreso? <span class="chev">⌄</span></summary>
+            <p>Definimos 3–5 indicadores simples (ventas, margen, flujo de caja, conversión, etc.). La idea es que tengas un tablero claro sin complicarte.</p>
+          </details>
+
+          <details data-reveal>
+            <summary>¿Las sesiones son virtuales? <span class="chev">⌄</span></summary>
+            <p>Sí, consultas virtuales (Costa Rica y otros países). Si estás en Costa Rica, podemos coordinar presencial según ubicación.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contacto" class="section light" aria-label="Contacto">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Contacto</span>
+          <h2 class="section-title">Conversemos sobre tu proyecto</h2>
+          <p class="section-subtitle">Respondo en menos de 24 horas. Contame en qué etapa estás y qué querés lograr.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-form" data-reveal>
+            <h3>Envíame un mensaje</h3>
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nombre">Nombre completo *</label>
+                  <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label for="telefono">Teléfono / WhatsApp *</label>
+                  <input type="tel" id="telefono" name="telefono" required placeholder="+506 1234-5678" autocomplete="tel" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Correo electrónico *</label>
+                  <input type="email" id="email" name="email" required placeholder="tu@email.com" autocomplete="email" />
+                </div>
+                <div class="form-group">
+                  <label for="etapa">Etapa del negocio</label>
+                  <input type="text" id="etapa" name="etapa" placeholder="Idea / Creciendo / Establecido" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="mensaje">Cuéntame sobre tu proyecto *</label>
+                <textarea id="mensaje" name="mensaje" required placeholder="¿Qué estás vendiendo? ¿Cuál es tu mayor obstáculo hoy?"></textarea>
+                <div class="hint">Tip: si puedes, contame tu meta (ventas, rentabilidad o estructura) para ayudarte mejor.</div>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                Enviar por WhatsApp <span class="arrow">→</span>
+              </button>
+
+              <p class="hint" style="margin-top:0.9rem;">
+                Al enviar, se abrirá WhatsApp con tu mensaje listo. Si estás en computadora, WhatsApp Web.
+              </p>
+            </form>
+          </div>
+
+          <div class="info-stack" data-reveal>
+            <div class="info-card">
+              <h3>Información de contacto</h3>
+
+              <div class="info-item">
+                <span class="info-icon">📧</span>
+                <div>
+                  <strong>Email</strong>
+                  <span style="color: var(--slate-500);" id="emailText">contacto@impulsapro.com</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <span class="info-icon">📱</span>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <span style="color: var(--slate-500);" id="waText">+506 1234-5678</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <span class="info-icon">⏰</span>
+                <div>
+                  <strong>Horario</strong>
+                  <span style="color: var(--slate-500);">Lun - Vie: 9:00 - 18:00</span>
+                </div>
+              </div>
+
+              <div class="info-item" style="margin-bottom:0;">
+                <span class="info-icon">📍</span>
+                <div>
+                  <strong>Ubicación</strong>
+                  <span style="color: var(--slate-500);">Costa Rica (consultas virtuales)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h3>Sígueme en redes</h3>
+              <div class="social-links">
+                <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn facebook">📘 Facebook</a>
+                <a href="https://instagram.com" target="_blank" rel="noopener" class="social-btn instagram">📸 Instagram</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-btn linkedin">💼 LinkedIn</a>
+                <a id="waLink" href="https://wa.me/50612345678" target="_blank" rel="noopener" class="social-btn whatsapp">💬 WhatsApp</a>
+              </div>
+              <p class="hint" style="margin-top:0.9rem;">(Cambia estos enlaces por tus perfiles reales.)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer aria-label="Pie de página">
+    <div class="container">
+      <div class="footer-logo">🚀 Majo Pizarro Consultores</div>
+      <p style="opacity:0.85;">Asesoría integral para emprendedores</p>
+      <p style="opacity:0.70; font-size:0.95rem; margin-top:0.25rem;">Transformando ideas en negocios exitosos</p>
+      <div class="footer-text">
+        <p>&copy; <span id="year"></span> Majo Pizarro Consultores. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a class="wa-float" id="waFloat" href="https://wa.me/50612345678" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <span class="wa-ico">💬</span> WhatsApp
+  </a>
+
+  <!-- Sticky Mobile CTA -->
+  <div class="mobile-cta" aria-label="Acción rápida">
+    <a class="btn btn-primary" href="#contacto">Agenda tu consulta gratuita <span class="arrow">→</span></a>
+  </div>
+
+  <script>
+    // ======= Config rápida (edita aquí) =======
+    const WHATSAPP_NUMBER = "50612345678"; // sin +, solo números
+    const DISPLAY_WHATSAPP = "+506 1234-5678";
+    const CONTACT_EMAIL = "contacto@impulsapro.com";
+
+    // ======= Header scroll =======
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    // ======= Mobile menu =======
+    const drawer = document.getElementById('mobileDrawer');
+    const openMenu = document.getElementById('openMenu');
+    const closeMenu = document.getElementById('closeMenu');
+
+    function setDrawer(open){
+      drawer.style.display = open ? 'block' : 'none';
+      drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
+      openMenu.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if(open){ document.body.style.overflow = 'hidden'; }
+      else{ document.body.style.overflow = ''; }
+    }
+
+    openMenu.addEventListener('click', () => setDrawer(true));
+    closeMenu.addEventListener('click', () => setDrawer(false));
+    drawer.addEventListener('click', (e) => {
+      if(e.target === drawer) setDrawer(false);
+    });
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape' && drawer.getAttribute('aria-hidden') === 'false') setDrawer(false);
+    });
+
+    // Close drawer on link click
+    drawer.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', () => setDrawer(false));
+    });
+
+    // ======= Smooth scroll with offset =======
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if(!href || href.length < 2) return;
+        const target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        const headerOffset = 84;
+        const rect = target.getBoundingClientRect();
+        const top = rect.top + window.pageYOffset - headerOffset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+
+    // ======= Reveal on scroll =======
+    const revealItems = document.querySelectorAll('[data-reveal]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('reveal');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -80px 0px' });
+
+    revealItems.forEach(el => observer.observe(el));
+
+    // ======= Animated counters =======
+    function animateCount(el){
+      const to = Number(el.getAttribute('data-count') || '0');
+      const suffix = el.getAttribute('data-suffix') || '';
+      const duration = 900;
+      const start = performance.now();
+      const from = 0;
+
+      function tick(now){
+        const p = Math.min((now - start) / duration, 1);
+        // easing (easeOutCubic)
+        const eased = 1 - Math.pow(1 - p, 3);
+        const val = Math.round(from + (to - from) * eased);
+        el.textContent = val + suffix;
+        if(p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    const statObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.querySelectorAll('[data-count]').forEach(animateCount);
+          statObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.25 });
+
+    const heroStats = document.querySelector('.hero-stats');
+    if(heroStats) statObserver.observe(heroStats);
+
+    // ======= Contact info bindings =======
+    document.getElementById('waText').textContent = DISPLAY_WHATSAPP;
+    document.getElementById('emailText').textContent = CONTACT_EMAIL;
+
+    const waBase = `https://wa.me/${WHATSAPP_NUMBER}`;
+    const waLink = document.getElementById('waLink');
+    const waFloat = document.getElementById('waFloat');
+    waLink.href = waBase;
+    waFloat.href = waBase;
+
+    // ======= Form -> WhatsApp (mensaje limpio) =======
+    const form = document.getElementById('contactForm');
+
+    function showToast(message){
+      // simple toast (sin librerías)
+      const toast = document.createElement('div');
+      toast.textContent = message;
+      toast.style.position = 'fixed';
+      toast.style.left = '50%';
+      toast.style.bottom = '90px';
+      toast.style.transform = 'translateX(-50%)';
+      toast.style.background = 'rgba(15,23,42,0.92)';
+      toast.style.color = 'white';
+      toast.style.padding = '0.9rem 1rem';
+      toast.style.borderRadius = '14px';
+      toast.style.fontWeight = '800';
+      toast.style.boxShadow = '0 18px 55px rgba(0,0,0,0.22)';
+      toast.style.zIndex = '1600';
+      toast.style.maxWidth = 'min(520px, 92vw)';
+      toast.style.textAlign = 'center';
+      document.body.appendChild(toast);
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transition = 'opacity 0.25s ease';
+        setTimeout(() => toast.remove(), 280);
+      }, 2200);
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const nombre = document.getElementById('nombre').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+      const etapa = document.getElementById('etapa').value.trim();
+      const mensaje = document.getElementById('mensaje').value.trim();
+
+      if(!nombre || !email || !telefono || !mensaje){
+        showToast('Por favor completa todos los campos obligatorios (*)');
+        return;
+      }
+
+      const lines = [
+        "Nuevo contacto desde la web Majo Pizarro Consultores",
+        "",
+        `Nombre: ${nombre}`,
+        `Email: ${email}`,
+        `Teléfono: ${telefono}`,
+        etapa ? `Etapa: ${etapa}` : null,
+        "",
+        "Mensaje:",
+        mensaje
+      ].filter(Boolean);
+
+      const text = encodeURIComponent(lines.join("\n"));
+      const url = `${waBase}?text=${text}`;
+      window.open(url, '_blank', 'noopener');
+
+      form.reset();
+      showToast('¡Listo! Abriendo WhatsApp con tu mensaje…');
+    });
+
+    // ======= Footer year =======
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Structured Data (basic) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Majo Pizarro Consultores",
+    "description": "Asesoría integral para emprendedores: finanzas, marketing, ventas y administración.",
+    "areaServed": "Costa Rica",
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": "#contacto"
+    }
+  }
+  </script>
+</body>
+</html>
