@@ -63,15 +63,21 @@
       line-height:1.6;
       color: var(--slate-800);
       overflow-x:hidden;
-      background: var(--page-bg);
-    }
+        /* Fondo global estilo HERO (peach + sage sobre paper) */
+  background:
+    radial-gradient(900px 600px at 18% 18%, rgba(209,156,140,.45), transparent 62%),
+    radial-gradient(900px 600px at 82% 22%, rgba(155,170,148,.45), transparent 62%),
+    radial-gradient(700px 520px at 50% 95%, rgba(209,156,140,.18), transparent 60%),
+    linear-gradient(180deg, #F8F7E8 0%, #F8F7E8 100%);
+  background-attachment: fixed;
+}
     a{ color:inherit; }
     .container{ max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
 
     /* Skip link (accesibilidad) */
     .skip-link{
       position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
-      background:#fff; color:#000; padding:0.75rem 1rem; border-radius: 10px;
+      background: transparent; color:#000; padding:0.75rem 1rem; border-radius: 10px;
       z-index:2000;
     }
     .skip-link:focus{ left: 1rem; top: 1rem; width:auto; height:auto; box-shadow: var(--shadow-md); }
@@ -436,8 +442,8 @@
     .section{
       padding: 5.5rem 0;
     }
-    .section.light{ background: #f8fafc; }
-    .section.white{ background: #ffffff; }
+    .section.light{ background: transparent; }
+    .section.white{ background: transparent; }
     .section.dark{
       background: linear-gradient(135deg, rgba(28,28,28,1) 0%, rgba(28,28,28,0.96) 60%, rgba(28,28,28,1) 100%);
       color: #fff;
@@ -482,7 +488,7 @@
     }
 
     .card{
-      background: white;
+      background: rgba(248,247,232,.78);
       padding: 2rem;
       border-radius: var(--radius-xl);
       border: 1px solid var(--slate-200);
@@ -662,7 +668,7 @@
       align-items:stretch;
     }
     .about-card{
-      background:white;
+      background: transparent;
       border: 1px solid var(--slate-200);
       border-radius: var(--radius-xl);
       padding: 2rem;
@@ -682,7 +688,7 @@
       gap: 0.9rem;
     }
     details{
-      background: white;
+      background: transparent;
       border: 1px solid var(--slate-200);
       border-radius: 18px;
       padding: 1rem 1.1rem;
@@ -722,7 +728,7 @@
       align-items:start;
     }
     .contact-form{
-      background:white;
+      background: transparent;
       border-radius: var(--radius-xl);
       padding: 2.2rem;
       box-shadow: var(--shadow-md);
@@ -746,7 +752,7 @@
     input:focus, textarea:focus{
       outline:none;
       border-color: var(--brand-sage);
-      background:white;
+      background: transparent;
       box-shadow: var(--ring);
     }
     textarea{ resize: vertical; min-height: 140px; }
@@ -773,7 +779,7 @@
 
     .info-stack{ display:flex; flex-direction:column; gap: 1rem; }
     .info-card{
-      background:white;
+      background: transparent;
       border-radius: var(--radius-xl);
       padding: 1.6rem;
       border: 1px solid rgba(226,232,240,0.9);
@@ -919,7 +925,11 @@
       *{ transition: none !important; animation: none !important; }
       [data-reveal]{ opacity:1; transform:none; }
     }
-  </style>
+  
+    /* Force global background visible */
+    .section.light, .section.white { background: transparent !important; }
+
+</style>
 </head>
 
 <body>
@@ -1255,7 +1265,7 @@
         <div class="cta-box" data-reveal>
           <h2>¿Listo para llevar tu negocio al siguiente nivel?</h2>
           <p>Agenda tu primera consulta gratuita y descubrí qué ajustar para crecer con orden.</p>
-          <a href="#contacto" class="btn btn-primary" style="background:white; color:#1e40af;">
+          <a href="#contacto" class="btn btn-primary" style="background: transparent; color:#1e40af;">
             Agenda tu consulta gratuita <span class="arrow">→</span>
           </a>
         </div>
