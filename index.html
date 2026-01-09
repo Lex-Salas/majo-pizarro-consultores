@@ -938,34 +938,24 @@
     .section.light, .section.white { background: transparent !important; }
 
 
-/* ===== Footer brand (logo real) ===== */
+/* ===== Footer Logo MJP ===== */
 .footer-brand{
   display:flex;
   flex-direction:column;
   align-items:center;
   text-align:center;
-  gap:.5rem;
-  margin-bottom:.25rem;
 }
 
 .footer-logo-img{
-  width:170px;
+  width:160px;
   max-width:100%;
-  height:auto;
-  filter: brightness(0) invert(1);
+  margin-bottom:.75rem;
+  filter:brightness(0) invert(1);
   opacity:.95;
 }
 
-.footer-brand-name{
-  font-weight:700;
-  font-size:1.15rem;
-  letter-spacing:.2px;
-  color: rgba(255,255,255,.92);
-}
-
 @media(max-width:768px){
-  .footer-logo-img{ width:140px; }
-  .footer-brand-name{ font-size:1.05rem; }
+  .footer-logo-img{width:130px;}
 }
 
 </style>
@@ -1450,10 +1440,7 @@
 
   <footer aria-label="Pie de página">
     <div class="container">
-      <div class="footer-brand">
-        <img src="logo-majo-pizarro-consultores.png" alt="MJP Consultores" class="footer-logo-img" />
-        <div class="footer-brand-name">MJP Consultores</div>
-      </div>
+      <div class="footer-logo">🚀 MJP Consultores</div>
       <p style="opacity:0.85;">Asesoría integral para emprendedores</p>
       <p style="opacity:0.70; font-size:0.95rem; margin-top:0.25rem;">Transformando ideas en negocios exitosos</p>
       <div class="footer-text">
